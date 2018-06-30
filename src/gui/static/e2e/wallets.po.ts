@@ -13,7 +13,7 @@ export class WalletsPage {
     const btnAdd = element(by.buttonText('Add Wallet'));
 
     return btnAdd.click().then(() => {
-      return element(by.css('app-create-wallet')).isPresent();
+      return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
     });
   }
 
@@ -21,7 +21,7 @@ export class WalletsPage {
     const btnLoad = element(by.buttonText('Load Wallet'));
 
     return btnLoad.click().then(() => {
-      return element(by.css('app-create-wallet')).isPresent();
+      return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
     });
   }
 
