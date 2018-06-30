@@ -6,10 +6,7 @@ go:
 
 matrix:
   include:
-    - os: linux
     - os: osx
-      # Do not start osx build for PR
-      if: type != pull_request
       osx_image: xcode8
 
 before_install:
