@@ -12,24 +12,16 @@ export class WalletsPage {
   showAddWallet() {
     const btnAdd = element(by.buttonText('Add Wallet'));
 
-    browser.sleep(1000).then(() => {
-      const btnAdd = element(by.buttonText('Add Wallet'));
-      return browser.sleep(1000).then(() => {
-        return btnAdd.click().then(() => {
-          return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
-        })
-      });
+    return btnAdd.click().then(() => {
+      return element(by.css('app-create-wallet')).isPresent();
     });
   }
 
   showLoadWallet() {
-    browser.sleep(1000).then(() => {
-      const btnLoad = element(by.buttonText('Load Wallet'));
-      return browser.sleep(1000).then(() => {
-        return btnLoad.click().then(() => {
-          return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
-        })
-      });
+    const btnLoad = element(by.buttonText('Load Wallet'));
+
+    return btnLoad.click().then(() => {
+      return element(by.css('app-create-wallet')).isPresent();
     });
   }
 
