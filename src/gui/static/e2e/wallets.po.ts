@@ -12,17 +12,13 @@ export class WalletsPage {
   showAddWallet() {
     const btnAdd = element(by.buttonText('Add Wallet'));
 
-    return btnAdd.click().then(() => {
-      return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
-    });
-
     browser.sleep(1000).then(() => {
       const btnAdd = element(by.buttonText('Add Wallet'));
       return browser.sleep(1000).then(() => {
-        btnAdd.click().then(() => {
+        return btnAdd.click().then(() => {
           return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
         })
-      })
+      });
     });
   }
 
@@ -30,10 +26,10 @@ export class WalletsPage {
     browser.sleep(1000).then(() => {
       const btnLoad = element(by.buttonText('Load Wallet'));
       return browser.sleep(1000).then(() => {
-        btnLoad.click().then(() => {
+        return btnLoad.click().then(() => {
           return browser.sleep(1000).then(() => element(by.css('app-create-wallet')).isPresent());
         })
-      })
+      });
     });
   }
 
