@@ -1,4 +1,4 @@
-# Skycoin desktop client
+# Skycoin desktop client 
 
 The Skycoin wallet ships with a web interface which can be ran from the browser and/or Electron.
 

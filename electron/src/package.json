@@ -5,6 +5,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "electron-context-menu": "^0.9.1",
-    "electron-debug": "^1.5.0"
+    "electron-debug": "^1.5.0",
+    "hardware-wallet-js": "git+https://git@github.com/Senyoret1/hardware-wallet-js.git#fc6cdfc"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.8.2"
   }
 }
